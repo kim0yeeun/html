@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+ <body>
+  <h1> H1 Tag1</h1>
+  <h1> H1 Tag2</h1>
+  <h1> H1 Tag3</h1>
+  <h1> H1 Tag4</h1>
+  <h1> H1 Tag5</h1>
+
+  <h2 class="head2">head2 class</h2>
+  <h2 class="head2">head2 class</h2>
+  <h2 class="head2">head2 class</h2>
+  <h2 class="head2">head2 class</h2>
+
+  <h3 id="head3">head3 id</h3>
+  <h3 id="head3">head4 id</h3>
+  <input type="text" id="id"/>
+  <input type="text" id="id"/>
+ 
+ </body>
+</html>
+
+<script>
+	document.getElementById("id").value=10;
+	document.write("<br/>");
+	var elemTag = document.getElementsByTagName("h1");
+	console.log(elemTag);
+	document.write("1번째 h1 : " + elemTag[0].innerHTML + "<br/>");
+	elemTag[3].innerHTML="더복깅";
+	document.write("4번째 h1 : " + elemTag[3].innerHTML + "<br/>");
+
+	var elemClass=document.getElementsByClassName("head2");
+	console.log(elemClass);
+	document.write("2번째 h2 : " + elemTag[1].innerHTML + "<br/>");
+	elemClass[2].innerHTML="엽덕매어";
+	document.write("3번째 h2 : " + elemTag[2].innerHTML + "<br/>");
+
+	var elemid=document.getElementsById("head3");
+	console.log(elemId);
+</script>

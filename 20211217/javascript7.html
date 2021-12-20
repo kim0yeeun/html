@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num1 = 10; //전역변수
+        function test() {
+            var num = 30; //지역변수. 함수안에서만 사용가능
+            num1 = 100; //전역변수는 함수안에서도 사용가능
+            document.write(num);
+        }
+        console.log(num1); //10
+        test();
+        console.log(num1); //100. 테스트를 호출해줘야 전역변수의 값이 바뀐다.
+        //console.log(num); //함수 밖에서 호출 불가
+
+        document.write("<h3>내장함수</h3>");
+        document.write("10+20" + "<br/>"); //10+20
+        document.write(eval("10+20") + "<br/>") //eval: 문자열을 JS코드로 변환
+
+        var num = 100;
+        document.write("num" + 10 + "<br/>");
+        document.write(eval("num") + 10 + "<br/>");
+
+        //isNaN() : Not a Number. 문자의 값이 Number로만 이루어져있으면 false
+        document.write(isNaN("100") + "<br/>"); //false
+        document.write(isNaN("010-1234-1234") + "<br/>"); //true . 대시문자 존재
+        document.write(isNaN("01012341234") + "<br/>"); //false
+
+        document.write(Number("10") + parseInt("20") + "<br/>"); //문자 -> 숫자
+        document.write(String(10) + String(20) + "<br/>"); //숫자 -> 문자
+    </script>
+</head>
+
+<body>
+    <button onclick="test()">버튼</button>
+</body>
+
+</html>

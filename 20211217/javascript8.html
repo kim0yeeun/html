@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("<h3>생성자</h3>");
+        function comFactory(cpuInfo, ramInfo, hddInfo){
+            this.cpu = cpuInfo;
+            this.ram = ramInfo;
+            this.hdd = hddInfo;
+            this.totInfo = function(){
+                document.write("제조업체: 한국전자<br/>");
+                document.write("cpu는 "+this.cpu+"<br/>");
+            }
+        }
+        var com = new comFactory("2.8", "8G", "2T"); //객체생성
+        var com1 = new comFactory("3.0", "16G", "4T");
+        document.write(com.cpu + "<br/>");
+        document.write(com.ram + "<br/>");
+        document.write(com.hdd + "<br/>");
+        com.totInfo();
+
+        document.write(com1.cpu + "<br/>");
+        document.write(com1.hdd + "<br/>");
+        com1.totInfo();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

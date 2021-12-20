@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("<h3>배열 객체: Array 객체</h3>");
+        /*
+            int[] i = new int[3];
+            int[] i = {1,2,3,4};
+        */
+       var name1 = ["김일이","김이삼","김삼사","김사오"];
+       document.write(name1[1]+"<br/>");
+
+       var name2 = new Array(4);
+       name2[0] = "김일이";
+       name2[1] = "김이삼";
+       name2[2] = "김삼사";
+       document.write(name2[2]+"<br/>");
+       
+       var money=[100,100,200,50];
+       var theLen = money.length;
+       var total = 0;
+       document.write(money[0]+"<br/>");
+       
+       /*배열 안에 있는 값의 합을 구하시오.*/
+       for(var i = 0; i < money.length; i++){
+           total += money[i]; //money[0] + money[1] + money[2] + money[3]
+       }
+       document.write(total+"<br/>");
+
+       var theFood = ["짜장면", "냉면", "갈비탕", "돈까스", "삼겹살"];
+       theFood.reverse(); //역순으로 저장
+       document.write(theFood + "<br/>"); 
+       theFood.sort(); //오름차순으로 저장
+       document.write(theFood + "<br/>"); 
+       
+       var Mountain2 = ["설악산", "지리산", "한라산", "속리산"];
+       var result = theFood.concat(Mountain2);
+       document.write(result+"<br/>");
+       result = theFood.slice(2,4); //index 2 부터 index 4 - 1 까지 출력
+       document.write(result+"<br/>");
+       result = theFood.join("-"); //배열 요소 사이에 삽입
+       document.write(result+"<br/>");
+       
+       var theSubway = ["2호선", "9호선", "7호선", "4호선", "3호선"];
+       var newLine1 = "1호선";
+       var newLine2 = "분당선";
+       theSubway.pop();//맨 뒤 요소 삭제
+       document.write(theSubway + "<br/>");
+       theSubway.shift();//맨 앞 요소 삭제
+       document.write(theSubway + "<br/>");
+       theSubway.unshift(newLine1); //맨 앞에 요소 추가
+       document.write(theSubway + "<br/>");
+       theSubway.push(newLine2); //맨 뒤에 요소 추가
+       document.write(theSubway + "<br/>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
