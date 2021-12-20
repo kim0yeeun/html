@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+	var myage = 27;
+	if (myage>=20)
+	{
+		document.write("당신은 성인입니다.<br/>");
+	}
+	var matNum=50;
+	var korNum=70;
+	var avg=(matNum+korNum)/2;
+	document.write(matNum>=60 && korNum>=60 && avg>=70);
+	document.write("<br/>");
+	if (matNum>=60 && korNum>=60 && avg>=70)
+	{
+		document.write("합격입니다.<br/>");
+	}else{
+		document.write("불합격입니다.<br/>");
+	}
+	/*90점 이상이면a학점 80b 70c 60d 그 밑은 f학점*/
+	var score = 87; // var score = prompt("점수를 입력해주세요.");
+	if (score>=90)
+	{
+		document.write("A학점");
+	}else if (score>=80){
+		document.write("B학점");
+	}else if (score>=70){
+		document.write("C학점");
+	}else if (score>=60){
+		document.write("D학점");
+	}else{
+		document.write("F학점");
+	}
+	document.write("<br/>");
+	
+	var num="02";
+	if (num=="02")
+	{
+		document.write("서울");
+	}else if (num=="031")
+	{
+		document.write("경기도");
+	}else if (num=="032")
+	{
+		document.write("인천");
+	}else if (num=="051")
+	{
+		document.write("부산");
+	}
+	document.write("<br/>");
+
+	//switch-case
+	switch (num)
+	{
+	case "02": document.write("서울");break;
+	case "031": document.write("경기도");break;
+	default:  document.write("타지역입니다.");break;
+	case "032": document.write("인천");break;
+	case "051": document.write("부산");
+	}
+	document.write("<br/>");
+
+	for (var i=1; i<=5; i++)
+	{
+		document.write(i+"입니다.<br/>");
+	}
+	document.write("<table border=1 width=100>")
+	for (var i=1; i<=4; i++)
+	{
+		document.write("<tr><td>"+i+"</td><td>"+i+"</td><td>"+i+"</td></tr>")
+	}
+	document.write("</table>");
+	document.write("<br/>");
+	/*구구단 3단만 출력*/
+	for (var i=1; i<=9; i++)
+	{
+		document.write("3*"+i+"="+3*i+"<br/>");
+	}
+	/*구구단 3단만 내림차순으로 출력*/
+	for (var i=9; i>=1; i--)
+	{
+		document.write("3*"+i+"="+3*i+"<br/>");
+	}
+	/*구구단 3단을 내림차순으로 짝수만 출력 출력*/
+	for (var i=9; i>=1; i--)
+	{
+		if (i%2=="0")
+		{
+			document.write("3*"+i+"="+3*i+"<br/>");
+		}
+	}
+	/*while*/
+	var i=9;
+	while (i>=1)
+	{
+		document.write("3*"+i+"="+3*i+"<br/>");
+		i--;
+	}
+	document.write("<br/><br/><hr/><br/><br/>");
+	document.write("<table border=1 width=100>");
+	var i=5;
+	while (i>=1)
+	{
+		document.write("<tr><td>"+i+"</td><td>"+i+"</td><td>"+i+"</td></tr>");
+		i--;
+	}
+	document.write("</table>");
+	document.write("<br/><br/><hr/><br/><br/>");
+
+	document.write("<table border=1 width=100>");
+	var i=5;
+	var y=1;
+	while (i>=1)
+	{
+		document.write("<tr><td>"+y+"</td><td>"+y+"</td><td>"+y+"</td></tr>");
+		i--;
+		y++;
+	}
+	document.write("</table>");
+	document.write("<br/><br/><hr/><br/><br/>");
+	/*구구단의 원하는 단을 입력받아서 출력하세요*/
+	var dan =1;//var dan = Number(prompt("원하는 단을 입력하세요."));
+	for (var i=1; i<=9; i++)
+	{
+		document.write(dan+"*"+i+"="+dan*i+"<br/>");
+	}
+	document.write("<br/><br/><hr/><br/><br/>");
+	/*이중반복문*/
+	for (var dan=2; dan<=5; dan++)
+	{
+		for (var gop=1; gop<=9; gop++)
+		{
+			document.write(dan+"*"+gop+"="+dan*gop+"<br/>");
+		}
+	}
+	document.write("<br/><br/><hr/><br/><br/>");
+	/*원하는 단의범위와 곱의 범위를 입력받아 출력하세요.*/
+	var startDan=2;			// var statDan=Number(prompt("시작단","2"));
+	var endDan=2;			// var endDan=Number(prompt("끝단","7"));
+	var startGop=1;			// var statGop=Number(prompt("시작곱","1"));
+	var endGop=2;			// var endGop=Number(prompt("끝곱","3"));
+	for (var dan=statdan; dan<=enddan; dan++)
+	{
+		for (var gop=statgop; gop<=endgop; gop++)
+		{
+			document.write(dan+"*"+gop+"="+dan*gop+"<br/>");
+		}
+	}
+	
+
+	document.write("<br/><br/><hr/><br/><br/>");
+
+	/*while문*/
+	
+	var dan = 2;
+	while (dan<=5)
+	{
+		for (var gop=1; gop<=9; gop++)
+		{
+			document.write(dan+"*"+gop+"="+(dan*gop)+"<br/>");
+		}
+		dan++;
+	}
+	var gop=1;
+	while (gop<=9)
+	{
+		document.write("2*"+gop+"="+2*gop+"<br/>");
+		gop++;
+	}
+
+	document.write("<br/><br/><hr/><br/><br/>");
+
+	var dan=startDan;
+	while (dan<=endDan)
+	{
+		var gop=startGop;
+		while (gop<=endGop)
+		{
+			document.write(dan+"*"+gop+"="+(dan*gop)+"<br/>");
+			gop++;
+		}
+		dan++;
+	}
+	document.write("<br/><br/><hr/><br/><br/>");
+
+	for (var dan=2; dan<=9; dan++)
+	{
+		var gop =1
+		while (gop<=9)
+		{
+			document.write(dan+"*"+gop+"="+(dan*gop)+"<br/>");
+			gop++;
+		}
+	}
+	document.write("<br/><br/><hr/><br/><br/>");
+
+	// while문으로 4단 출력
+	var gop=1;
+	while (gop<=9)
+	{
+		document.write("4*"+gop+"="+(4*gop)+"<br/>");
+		gop++;
+	}
+
+	document.write("for문안에 while문<br/>");
+	for (var dan=4; dan<=6; dan++)
+	{
+		var gop=1;
+		while (gop<=9)
+		{
+			document.write(dan+"*"+gop+"="+dan*gop+"<br/>");
+			gop++;
+		}
+	}
+	document.write("while문 안에 for문<br/>");
+	var dan=2;
+	while (dan<=4)
+	{
+		for (var gop=5; gop<=8; gop++)
+		{
+			document.write(dan+"*"+gop+"="+dan*gop+"<br/>");
+		}
+		dan++;
+	}
+
+	/*입력 받은 범위의 값 중 홀수의 합을 구하세요. continue 이용*/
+	var startNum=0; // var startNum=Number(prompt("시작 값을 입력하세요."));
+	var endNum=0;   //var endNum=Number(prompt("끝 값을 입력하세요."));
+	var sum=0;
+	for (i=startNum; i<=endNum; i++)
+	{
+		if (i%2==0) continue;
+		{
+			sum+=i;
+		}
+	}
+	document.write(startNum+"부터 "+endNum+"까지의 합은 "+sum+"입니다. <br/>");
+
+	/*1부터 100이상의 값을 입력받아서 범위의 합이 5000이상이 될 때까지만의 합을 구하세요.*/
+	var num=Number(prompt("1부터 더할 100이상의 값을 입력하세요."));
+	var sum=0;
+	for (var i=1; i<=num; i++)
+	{
+		if (sum>=5000) break;
+		sum+=i;
+	}
+	document.write(sum);
+  </script>
+ </head>
+ <body>
+	<table border="1" width="100">
+		<tr><td>1</td><td>1</td><td>1</td></tr>
+		<tr><td>2</td><td>2</td><td>2</td></tr>
+		<tr><td>3</td><td>3</td><td>3</td></tr>
+		<tr><td>4</td><td>4</td><td>4</td></tr>
+	</table>
+  
+ </body>
+</html>

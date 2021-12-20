@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>]
+  <link src="" type=""/>
+  <!-- 불러올때는 불러오기만하고 닫아야한다. write하려면 새로 script열기 -->
+  <script src="note.js" type="text/javascript"></script>
+  <script>
+	document.write("<br/>안녕하새우"); // System.out.print()
+  </script>
+  <script>
+	document.write("처음뱁갯숨미당<br/>");
+  </script>
+  <script>
+	var num=10;
+	document.write(num+"<br/>");
+	var num="김예은";
+	document.write(num+"<br/>");
+	num = 10.5;
+	document.write(num+"<br/>");
+	var firstNum = 10;
+	var nextNum = 10.5;
+	var result = firstNum + nextNum;
+	document.write(result+"<br/>");
+	var name = '김예은';
+	document.write(name+"<br/>");
+	var result = true; // 부울타임
+	document.write(result+"<br/>");
+	var result = null; // 널
+	document.write(result+"<br/>");
+	var b1 = true;
+	var b2 = false;
+	result = b1 && b2;
+	document.write(result+"<br/>");
+	var num1 = 100;
+	document.write(num1++ +"<br/>");
+	document.write(num1+"<br/>");
+	var num1 = 100;
+	document.write(++num1 +"<br/>");
+	document.write(num1+"<br/>");
+	var num2 = 200;
+	var num3 = 150;
+	document.write((num1<num2 && num1>num3)+"<br/>");
+
+	/*var kornum = Number(prompt("국어 점수를 입력해주세요.","0"));
+	var engnum = Number(prompt("영어 점수를 입력해주세요.","0"));
+	var matnum = Number(prompt("수학 점수를 입력해주세요.","0"));
+	var avg = (kornum+engnum+matnum)/3;
+	var result = avg >= 70 && kornum>=60 && engnum>=60 && matnum>=60;
+	document.write(result+"<br/>");
+	*/
+
+	var num1 = 100; // 숫자
+	var num2 = 200; // 숫자
+	var txt5 = String(1000); // 문자
+	document.write(num1+num2+txt5+"<br/>"); //3001000
+	document.write(num1+txt5+num2+"<br/>"); //1001000200
+	document.write(txt5+num1+num2+"<br/>"); //1000100200
+
+	//삼항연산자
+	var num1=10;
+	var num2=20;
+	var result = num1>num2? num1+num2 : num1-num2;
+	document.write(result+"<br/>");
+
+	var result = confirm("당신은 자바스크립트를 하세요?") 
+	var txt = result ? "good" : "not good"; //확인 true 취소 false
+	document.write(txt+"<br/>");
+	
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>
