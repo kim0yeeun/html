@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <!--jquery사용1-->
+  <script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
+  <!--jquery사용2-->
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+  <!--jquery사용3 마지막 버전--> 
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-latest.js"></script>
+  <script>
+  // $ 는 문서가 준비 된 후에 실행하겠다 는 뜻 script를 body에 넣지 않고 사용할 수 있음 
+  // 두 개 다 같은건데 밑의 것을 더 선호함 
+  // $(); 이 jquery의 시작
+  // $(function(){});
+	$(document).ready(function(){
+		document.getElementById("txt").value="10";
+	});
+	$(function(){
+		document.getElementById("txt1").value="10";
+		//document.getElementsByTagName("txt").value="10";
+		//document.getElementsByClassName("txt").value="10";
+		//돔을 사용할 때 너무 기니까 $()로 사용할 수 있게 만듬 
+	});
+	
+	$(function(){
+		// jquery: dom대신에 seletor를 사용할 수 있게 $() 를 지원함 
+		$("#txt2").val("기맨");
+		$(".txt2").val("기맨");
+	});
+
+
+  </script>
+
+  <title>Document</title>
+ </head>
+ <body>
+  <input type="text" id="txt"/><br/>
+  <input type="text" id="txt1"/><br/>
+  <input type="text" id="txt2"/><br/>
+  <input type="text" class="txt2"/>
+ </body>
+</html>

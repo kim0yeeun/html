@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>문서 객체 조작 메서드</title>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js"></script>
+  <script>
+	$(function(){
+		// 1.요소를 바꾸는 경우에는 .html 
+		$("#btn1").click(function(){
+			$(".theTitle").html("<a href='#'>요소가 있는 내용으로 변경</a>");
+		});
+		// 2.list2를 리스트2로 변경
+		// text 변경은 text
+		$("#btn2").click(function(){
+			$(".obj1").text("리스트2");
+		});
+		// 3.id="list3"인 요소의 마지막 위치에 새 요소를 추가한다. 
+		// append : 뒤에 추가
+		$("#btn3").click(function(){
+			$("#list3").append("<li>list_6</li>");
+		});
+		// 4.id="list3"인 요소의 첫 위치에 새요소를 추가한다. 
+		// prepend : 앞에 추가
+		$("#btn4").click(function(){
+			$("#list3").prepend("<li>list_1</li>");
+		});
+		// 5.id="list3"인 3번쨰 li요소의 이전에 새요소를 중간에 추가한다.
+		// insertBefore은 선택자가 뒤에온다!!!!! 
+		$("#btn5").click(function(){
+			$("<li>이전에 추가된 요소</li>").insertBefore($("#list3 li").eq(2));
+		});
+		// 6.id="list3"인 5번쨰 li요소의 이후에 새요소를 중간에 추가한다.
+		//  insertAfter도 선택자가 뒤에온다!!!!!
+		$("#btn6").click(function(){
+			$("<li>이후에 추가된 요소</li>").insertAfter($("#list3 li").eq(4));
+		});
+		// 7.id="list3"인 요소의 하위 <li> 요소중 첫번째 요소를 삭제한다. 
+		// remove
+		$("#btn7").click(function(){
+			$("#list3 li").eq(0).remove();
+		});
+		// 8.id="list3"인 요소의 두번째 <li> 요소에 속성을 추가한다. 
+		// addClass: 속성 추가 // f12로 클래스 추가 확인
+		$("#btn8").click(function(){
+			$("#list3 li").eq(1).addClass("obj3");
+		});
+		// 9.id="list3"인 요소의 첫번째 <li> 요소의 class명을 변경한다.
+		// attr : 클래스명 변경값이 있으면 변경 / 클래스명만 있으면 반환  // f12로 클래스명 변경 확인
+		$("#btn9").click(function(){
+			$("#list3 li").eq(0).attr("class","obj2");
+			$(".obj2").css("color","purple");
+			$("#list3 li").eq(0).addClass("obj4");
+			$(".obj4").css("border","2px solid #ccc");
+		});
+		// 10. class값 가지고 오기
+		$("#btn10").click(function(){
+			$(".theTitle").html($("#list3 li").eq(0).attr("class"));
+		});
+		$("#btn11").click(function(){
+			$(".ex").html($("#list3 li").eq(0).attr("class"));
+		});
+
+
+	});
+  </script>
+ </head>
+ <body>
+  <h3 class="ex">클래스 속성을 가져와서 바꾸기</h3>
+  <h2 class="theTitle">html 조작</h2>
+  <ul id="list3">
+	<li class="obj1">list_2</li>
+	<li>list_3</li>
+	<li>list_4</li>
+	<li>list_5</li>
+  </ul>
+  <button type="button" id="btn1">버튼1</button>
+  <button type="button" id="btn2">버튼2</button>
+  <button type="button" id="btn3">버튼3</button>
+  <button type="button" id="btn4">버튼4</button>
+  <button type="button" id="btn5">버튼5</button>
+  <button type="button" id="btn6">버튼6</button>
+  <button type="button" id="btn7">버튼7</button>
+  <button type="button" id="btn8">버튼8</button>
+  <button type="button" id="btn9">버튼9</button>
+  <button type="button" id="btn10">버튼10</button>
+  <button type="button" id="btn11">버튼11</button>
+ </body>
+</html>
