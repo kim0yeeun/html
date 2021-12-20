@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>목록과 링크</title>
+  <style>
+	.book1{
+		list-style-type:upper-alpha; /*abcd의 대소문자*/
+	}
+	.book2{
+		list-style-type:upper-roman;
+	}
+	#image{
+		list-style-image:url("C:/Users/user/Desktop/html/짱구.JPG"); /*불릿을 이미지로 사용*/
+	}
+	#inside{
+		list-style-position:inside;
+	}
+	#outside{
+		list-style-position:outside; /*기본값*/
+	}
+  </style>
+ </head>
+ <body>
+	<ol class="book1" type="a">
+	 <li>Do it! 시리즈</li>
+	 <li>된다 시리즈</li>
+	 <li>DMC 프로 사진가</li>
+	 <li>대이터과학 시리즈</li>
+	</ol>
+	<ol class="book2" type="i">
+	 <li>Do it! 시리즈</li>
+	 <li>된다 시리즈</li>
+	 <li>DMC 프로 사진가</li>
+	 <li>대이터과학 시리즈</li>
+	</ol>
+	<ul id="image">
+	 <li>Do it! 시리즈</li>
+	 <li>된다 시리즈</li>
+	 <li>DMC 프로 사진가</li>
+	 <li>대이터과학 시리즈</li>	
+	</ul>
+	<h2>position</h2>
+	<ul id="inside">
+	 <li>Do it! 시리즈</li>
+	 <li>된다 시리즈</li>
+	 <li>DMC 프로 사진가</li>
+	 <li>대이터과학 시리즈</li>	
+	</ul>
+	<ul id="outside">
+	 <li>Do it! 시리즈</li>
+	 <li>된다 시리즈</li>
+	 <li>DMC 프로 사진가</li>
+	 <li>대이터과학 시리즈</li>	
+	</ul>
+ </body>
+</html>

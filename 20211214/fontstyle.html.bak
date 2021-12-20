@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>fontstyle</title>
+  <style type="text/css">
+	/*  id    : #txt{   */
+	/*  class : .txt{   */
+	h1{ <!--글꼴-->
+		font-family:"굴림",gulim;
+		/*글자의 굵기*/
+		font-size : 25px; /* 1em:M; 0.1em*/ 
+		/*글자의 굵기*/
+		font-weight : bold /*normal,bolder,100,200,..,900*/ 
+		/*대문자를 소문자 크기에 맞춰 작게 표시*/
+		font-variant : small-caps; /*normal*/
+		font-style : italic; /*normal*/
+		/*줄간 굵기*/
+		line-height : 120%;
+		/* color : #123456;         #223344 = #234 두글자씩 같게 */
+		color : aqua;
+	}
+	/*문단의 정렬*/
+	#txt2{
+		text-align : justify; /*양쪽정렬*/ 
+	
+	}
+	#txt1{
+		text-align : center; /*right,left*/
+	}
+	/*이미지와 글자가 같이 있을 때 글자의 위치*/
+	#image img{
+		vertical-align : top; /*middle*/
+	}
+	/*들여쓰기*/
+	.school{
+		text-indent : 30px;
+	}
+	/*대소문자 변경을 실행한다*/
+	#lower{
+		text-transform : lowercase;	
+	}
+	#upper{
+		text-transform : uppercase;	
+	}
+	#capitalize{
+		text-transform : capitalize; /*첫 글자만 대문자*/
+	}
+	#over{
+		text-decoration : overline;
+	}
+	#line-th{
+		text-decoration : line-through;
+	}
+	#under{
+		text-decoration : underline;
+	}
+	/*a태그의 textunderline을 없애겠돠*/
+	a{
+		text-decoration : none;
+	}
+	.letter{
+		letter-spacing : 20px;
+	}
+	.content{
+		width : 300px;
+		border : 1px solid #ccc;
+		white-space : nowrap; /*줄바꿈 없음*/
+		overflow : hidden;
+		text-overflow : ellipsis; /*dip(그냥 자름),ellipsis(...)*/
+ 	}
+	.content:hover{
+		overflow : visible;
+	}
+  </style>
+ </head>
+ <body>
+	<h1 id="txt">Web STANDARD Publishing!</h1>
+	<h1 class="txt">Web Standard Publishing!</h1>
+	<p>웹 디자인의 한 분야로 원래 용어는 웹콘텐츠 UI 디자인이다.</p>
+	<p id="txt1">방송인 유재석이 코로나19 확진 판정을 받았다.유재석의 소속사 안테나는 13일 오후 "유재석이 13일 오전 진행한 코로나19 검사에서 양성 판정을 받았다"고 밝혔다.유재석은 지난 11일 동료인 안테나 유희열 대표의 코로나19 확진 이후 밀접접촉자로 분류돼, 즉시 코로나19 검사를 진행한 뒤 수동 감시 중이었다. 11일 검사에서는 음성이 나왔고, 일주일 이내 재검사를 진행하도록 한 방역지침에 따라 13일 2차 검사를 한 결과 양성 판정을 받았다고 안테나 측은 설명했다.유재석은 지난 7월 코로나19 확진자와 밀접접촉해 자가격리를 한 차례 한 적 있지만 확진은 처음이다. 그는 지난 9월 말 코로나19 백신 2차 접종까지 완료한 상태다. 안테나 측은 "유재석 씨와 접촉한 다른 아티스트와 직원들에 대한 재검사 및 방역지침에 따른 조치를 취하는 중"이라고 밝혔다.
+	</p>
+	<p id="txt2">방송인 유재석이 코로나19 확진 판정을 받았다.유재석의 소속사 안테나는 13일 오후 "유재석이 13일 오전 진행한 코로나19 검사에서 양성 판정을 받았다"고 밝혔다.유재석은 지난 11일 동료인 안테나 유희열 대표의 코로나19 확진 이후 밀접접촉자로 분류돼, 즉시 코로나19 검사를 진행한 뒤 수동 감시 중이었다. 11일 검사에서는 음성이 나왔고, 일주일 이내 재검사를 진행하도록 한 방역지침에 따라 13일 2차 검사를 한 결과 양성 판정을 받았다고 안테나 측은 설명했다.유재석은 지난 7월 코로나19 확진자와 밀접접촉해 자가격리를 한 차례 한 적 있지만 확진은 처음이다. 그는 지난 9월 말 코로나19 백신 2차 접종까지 완료한 상태다. 안테나 측은 "유재석 씨와 접촉한 다른 아티스트와 직원들에 대한 재검사 및 방역지침에 따른 조치를 취하는 중"이라고 밝혔다.
+	</p>
+	<p id="image">짱구입니다.<img src="짱구.JPG"/>
+	<h2>css는 정말신기해요</h2>
+	<h2 class="school">css는 정말신기해요</h2>
+	<p id="lower">PoWeR</p>
+	<p id="upper">PoWeR</p>
+	<p id="capitalize">PoWeR</p>
+	
+	<ul>
+		<li id="over">hello</li>
+		<li id="line-th">hello</li>
+		<li id="under">hello</li>
+		<li id="none"><a href="#">hello</a></li>
+	</ul>
+	<p class="letter">안녀하심미강</p>
+	<p class="content">방역패스 의무화 시행 첫날인 13일 백신 접종 여부를 확인하기 위한 ‘QR 코드’가 점심 시간에 먹통이 되며 혼란을 빚은 가운데, 저녁 식사 시간에도 오류해 발생해 시민들이 불편을 겪었다.</p>
+ </body>
+</html>
