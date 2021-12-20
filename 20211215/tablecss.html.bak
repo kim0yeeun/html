@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>tablecss</title>
+  <style>
+	.table1, .table2 {border:1px solid black;
+			 border-collapse:separate;
+			 /*table선과 td선을 합치기 위해 collapse 사용, separate가 기본값, 저자리에 collapse쓰면 합침*/
+			 border-spacing:20px 10px; width:500px;}
+	.table1 td{border:1px dotted gray;
+				empty-cells:show; /*기본값*/}
+	.table2 td{border:1px dotted gray;
+				empty-cells:hide;}
+	
+	table{border:1px solid #ccc; width:300px;
+		  /*table-layout:fixed; */
+		  table-layout:auto; 
+		  word-break:break-all; height:auto;}
+		   <!-- fixed해도 한글만 픽스되고 영어는 안됨 그래서 word-break,height 해주면 됨 -->
+	td{width:150px;}
+	.v-align {border:1px solid #ccc; width:300px;}
+	.v-align td {height: 150px;
+				 border:1px dotted balck;}
+	#td1 {vertical-align:top;}
+	#td2 {vertical-align:bottom;}
+	#td3 {vertical-align:middle;}
+
+  </style>
+ </head>
+ <body>
+ <table class="table1">
+	<caption>프로 축구 경기 일정</caption>
+	<tr><td>울산</td><td>울산 vs 인천</td><td>tv중계</td></tr>
+	<tr><td>부산</td><td>부산 vs 대전</td><td>     </td></tr>
+	<tr><td>서울</td><td>서울 vs 강원</td><td>     </td></tr>
+ </table>
+<!-- td의 공백처리 -->
+ <table class="table2">
+	<caption>프로 축구 경기 일정</caption>
+	<tr><td>울산</td><td>울산 vs 인천</td><td>tv중계</td></tr>
+	<tr><td>부산</td><td>부산 vs 대전</td><td>     </td></tr>
+	<tr><td>서울</td><td>서울 vs 강원</td><td>     </td></tr>
+ </table>
+
+ <hr/>
+
+ <h1>Table Layout</h1>
+ <table>
+	<tr>
+		<td>
+			한글로띄어쓰기없게길게붙여쓰기
+		</td>
+		<td>
+			long_desciption_without_space
+		</td>
+	</tr>
+ </table>
+
+  <table border="1">
+	<tr width="150px" height="150px">
+		<td align="center" valign="top">HTML & CSS</td>
+		<td align="center">어려워요</td>
+	</tr>
+  </table>
+  <table class="v-align">
+	<tr>
+		<td id="td1" align="left">HTML & CSS</td>
+		<td id="td2" align="right">어려워요</td>
+		<td id="td3" align="center">모르겠어요</td>
+	</tr>
+  </table>
+ </body>
+</html>

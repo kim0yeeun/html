@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>float</title>
+  <style>
+	#container{width:800px; margin:0 auto;}
+	.left-img{float:left; margin-right:25;}
+	p{line-height:30px;}
+  </style>
+ </head>
+ <body>
+  <div class="container">
+	 <img src="images/cover.jpg" class="left-img"/>
+	 <h1>2022 베이징 동계올림픽</h1>
+	 <p> 2022년 2월 4일부터 2월 20일까지 중국 베이징에서 열리는 제24회 동계올림픽이다. 빙상 종목이 열리는 베이징과 썰매 종목이 열리는 옌칭, 설상 종목이 열리는 장자커우 등 3개 지역에서 나뉘어 열리며, 15개 종목에서 109개 세부종목이 실시되어 금메달 109개를 놓고 승부를 겨룬다.
+	</p>
+  </div>
+ </body>
+</html>

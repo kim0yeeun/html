@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>float</title>
+  <style>
+  /* 빛 : #fff 검정색, #000 흰색 */
+  /* 색 : #fff 흰색, #000 검정색 */
+	 li{list-style-type:none;}
+	h1{font:bold 42px "굴림",Gulim;
+	   background:#ccc;
+	   padding:10px 90px;
+	   letter-spacing:3px;
+	   }
+	.flower li{float:left; width:140px; text-align:center;}
+	h2{font:bold 35px "굴림",Gulim; width:100px; height: 90px;
+	   padding-top:10px; color:#fff; margin-left: 20px;}
+	.Sunflower h2{background:#c00;}
+	.Rose h2{background:#248;}
+	.Marigold h2{background:#f90;}
+	.Pansy h2{background:#880;}
+	.flower li p {text-align: justify; padding:10px;}
+
+  </style>
+ </head>
+ <body>
+  <h1>꽃의 종류</h1>
+  <div id="container">
+  <p class="intro">여러가지 꽃</p>
+  <ul class="flower">
+	<li class="Sunflower"><h2>해바라기</h2>
+	<p>줄기는 높이 2~3m 정도로 곧게 자라며 전체에 잎과 더불어 거센 털이 있다. </p>
+	</li>
+	<li class="Rose"><h2>장미</h2>
+	<p>장미는 온대성의 상록관목으로 햇빛을 좋아하는 식물이다. </p>
+	</li>
+	<li class="Marigold"><h2>메리골드</h2>
+	<p>오렌지색이 있으며, 프렌치계, 아프리칸계는 일장의 영향을 잘 받지 않으나 단일때 꽃이 핀다. </p>
+	</li>
+	<li class="Pansy"><h2>팬지</h2>
+	<p>3월의 도로변 화단 정원을 꽃방석처럼 창출하며 가을에 파종하는 1년생 초화</p>
+	</li>
+
+  </ul>
+  </div>
+ </body>
+</html>
