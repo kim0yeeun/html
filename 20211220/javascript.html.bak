@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+	function keyEvt(){
+		var msg= document.getElementByTagName("span");
+		var txt= document.getElementByTagName("input");
+		var val=txt[0].value;
+		if (val.length>=0 && val.length<10)
+		{
+			msg[1].style.color="black";
+		}
+		if (val.length>=10 && val.length<15)
+		{
+			msg[1].style.color="red";
+		}
+		
+		if (val.length>=16)
+		{
+			alert("15글자만 입력 가능합니다.")
+		}
+		if (val.length<16)
+		{	
+			msg[0].innerHTML=val.substring(0,15);
+			txt[0].value=val.substring(0,15);
+			msg[1].innerHTML= "(" + val.length + "자 입력)";
+		}
+		
+	}
+  </script>
+ </head>
+ <body>
+  입력값 : <span></span> <br/>
+  <input type="text" value="" onkeyup="keyEvt()"/> <span>(0자 입력)</span>
+ </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script> /*window.open(), location :href 알기 , navigator:userAgent 라는 속성 알기
+			BOM 객체 (브라우저에서 지워해주는 것) : confrim, alert, prompt,
+			setInterval(), clearInterval(), setTimeout()
+		    */
+	function cart(){
+		var con=confirm("장바구니로 이동하겠습니까?"); //T/F
+		if (con)
+		{
+			alert("장바구니로 이동했습니다.");
+			location.href="#";
+		}
+	}
+	function conf(){
+		var con=confirm("정말로 탈퇴하겠습니까?"); //T/F
+		if (con)
+		{
+			alert("탈퇴되었습니다.");
+			location.href="#"; //home으로 이동 
+		}
+	}
+  </script>
+ </head>
+ <body>
+  청바지<br/>
+  가격:5000원<br/>
+  <button type="button" onclick="cart()">장바구니</button>
+  <hr/>
+  회원 수정 <br/>
+  <button type="button" onclick="conf()">회원탈퇴</button>
+  
+  <script>
+	function btn() {
+		var cnt=10;
+		var msg=document.getElementById("count");
+		// 더이상실행되지 않도록 clearinterval 
+		interval=setInterval(function(){
+			cnt--;
+			msg.innerHTML=cnt;
+		},1000); //1초마다 setInterval 실행 
+
+		//10초가 지난 후 실행되는 함수 setTimeout
+		setTimeout(function(){
+			clearInterval(interval);
+			alert("페이지를 이동합니다.");
+			location.href="http://www.naver.com"
+		},10000); //10초
+	}
+  </script>
+
+
+  <h3><span id="count">10</span>초 후에 이동합니다.</h3>
+  <button type="button" onclick="btn()">버튼</button>
+</html>
