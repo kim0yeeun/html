@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>label</title>
+ </head>
+ <body>
+	<!-- method 를 적어주지 않으면 get이 default값, action # 은 넘기지 않겠다.의 뜻-->
+	<form action="#" method="get" name="frm">
+		<fieldset>
+			<!--레이블을 사용하려면 input에 id를 입력해야한다.-->
+			<!--레이블에 있는 for속성에는 input의 id를 입력해줘야한다.-->
+			<!--커서가 이름, 이메일에도 보여짐-->
+			<legend>기본정보</legend>
+			<p><label for="Name">이름 : </label><input type="text" id="Name" name="userName"/></p>
+			<p><label for="Email">이메일 : </label><input type="email" id="Email" name="userEmail"/></p>
+		</fieldset>
+	</form>
+  
+ </body>
+</html>

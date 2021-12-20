@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>게시판</title>
+ </head>
+ <body>
+ <form action ="#" name="frm">
+ <input type="hidden" name="memNum" value="30"/>
+ <input type="hidden" name="boardNum" value="1"/>
+ <!--value 를 서버로 넘긴당-->
+ 
+	<table border=1>
+		<caption>게시글 등록</caption>
+		<colgroup>
+			<col width="30%">
+			<col width="70%">
+		</colgroup>
+		<tfoot>
+			<tr><th colspan=2>
+				<input type="image" src="짱구.JPG" width="50" height="50"/>
+				<input type="submit" value="전송"/>
+			</th></tr>
+		</tfoot>
+		<tbody>
+			<tr><th>글쓴이</th>
+				<td><input type="text" name="writer"/ value="숭"></td>
+			</tr>
+			<tr><th>이메일</th>
+				<td><input type="email" name="email"/></td>
+			</tr>
+			<tr><th>제목</th>
+				<td><input type="text" name="subject"/></td>
+			</tr>
+			<tr><th>내용</th>
+				<td><textarea name="content" rows="6" cols="50">안녕하세요. 반갑습니당</textarea></td>
+			<tr><th>비밀번호</th>
+				<td><input type="password" name="password"/></td>
+			</tr>
+	
+		</tbody>
+	</table>
+</form>
+ </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>select</title>
+ </head>
+ <body>
+	<form action="#" name="frm">
+		<p> 과목
+		<select name="subject">
+			<option>HTML</option>
+			<option selected>JAVA</option>
+			<option>CSS</option>
+			<option>JAVASCRIPT</option>
+		</select>
+		</p> 
+		<p> 운덩
+		<select name="exercise">
+			<option value="1">넝구</option>
+			<option value="2" selected>배구</option>
+			<option value="3">야구</option>
+			<option value="4">피구</option>
+		</select>
+		</p>
+		<!--임의의 값을 전달하려면 value사용-->
+		<p> 스터디 지역
+			<select name="location">
+			<optgroup label="관악구">
+				<option>봉천동</option>
+				<option>신림동</option>
+				<option selected>남형동</option>
+			</optgroup>
+			<optgroup label="동대문구">
+				<option>전농동</option>
+				<option>답십리</option>
+				<option>신설동</option>
+			</optgroup>
+			</select>
+		</p>
+		<p>
+			<select name="class" multiple>
+				<option>건축학과</option>
+				<option>기계공학과</option>
+				<option>산업공학과</option>
+				<option selected>컴퓨터공학과</option>
+				<option>세무회계과</option>
+				<option>전기공학과</option>
+				<option>화학공학과</option>
+			</select>
+		</p>
+		<p>
+			<input type="text" name="interest" list=""/>
+			<datalist>
+				<option value="문법" label="문법"></option>
+				<option value="문법" label="어휘"></option>
+				<option value="문법" label="회화"></option>
+				<option value="문법" label="리스닝"></option>	
+				<option value="문법" label="뉴스청취"></option>	
+			</datalist>
+		</p>
+		<input type="submit" value="전숑"/><br/>
+	</form>
+ </body>
+</html>

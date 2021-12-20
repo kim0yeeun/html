@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>온라인 프로필</title>
+	<meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <style>* {
+    box-sizing: border-box;
+}
+body {
+    background:#222;
+    height:100%;
+    margin:0;
+}
+#container {
+    position:relative;
+    left:50%;
+    margin-left:-450px;
+    width:900px;
+    height:100%;
+}
+#main {
+    width:100%;    
+    height:100%;
+    background:#fff;
+}
+aside {
+    float:left;
+    width:300px;    
+    padding:20px 50px;
+    height:100%;
+    background:rgb(216, 216, 216);
+}
+li,p {
+    line-height: 2.0;
+    font-size:0.9em;
+}
+.pf {
+    border-radius:10%;
+    box-shadow:3px 3px 10px 2px #222;
+
+} 
+#detail {
+    position: relative;
+    top:80px;
+}
+#sns
+ {
+    position:relative;
+    top:100px;
+ }
+
+#main {
+    float:right;
+    width:600px;
+    height:100%;
+    padding:20px;
+}
+
+#main > section {
+    width:500px;
+    padding:20px;
+    margin:10px;
+    border-bottom:1px dotted #222;
+}
+
+section > p, section>table {
+    margin-left:50px;
+}
+
+/* 글자스타일 */
+aside h1 {
+    font-size:1.8em;
+    font-variant: small-caps;
+}
+aside h2 {
+    font-size:1.2em;
+}
+#namecard p {
+    font-size:0.9em;
+    color:rgb(99, 99, 99);
+    /* font-style:italic; */
+}
+
+.subtitle {
+    font-size:1.5em;
+    /* padding-left:45px; */
+    line-height:0.9em;
+}
+.subtitle::before {
+    content:"";
+    display:block;
+    background:url("../images/note.png") no-repeat;
+    width:24px;
+    height:24px;
+    float:left;
+    margin:0 15px 0 0;
+}
+section > p {
+    font-size:0.9em;
+}
+
+.label {
+    display:inline-block;
+    width:80px;
+    color:purple;
+    font-weight:bold;
+}
+
+meter {
+    width:200px;
+    margin-right:10px;    
+}
+  </style>
+</head>
+
+<body>
+    <div id="container">
+        <!-- 사이드바 -->
+        <aside>
+            <div id="namecard">
+				<img src="숙제2.JPG" width="243" height="239" border="0" alt="">
+				<h3>KYUNGHEE KO</h3>
+            </div>
+            <div id="detail">
+				오늘은 남은인생이 시작되는 <br/> 첫째날
+				<br/><br/><br/>
+				Jeju,Korea<br/>
+				funcom@gmail.com              
+            </div>
+            <div id="sns">
+                <h2>SNS</h2>
+				<a href>facebook</a>
+				<a href>twitter</a>
+				
+            </div>           
+        </aside>
+		<main>
+        <div id="main">
+            <!-- 자기 소개 -->
+            <section>
+				<blockquote>
+					<h3>Who am I?</h3>
+				</blockquote>
+				<p><mark>프론트앤드 웹 기술 (Front End Web Technique)</mark>에 관심이 많습니다.<br/>
+				현재 제주의 한 시골 마을에서 코딩 중입니다. </p>
+				<hr/>
+            </section>
+
+            <!-- 경력 -->
+            <section>
+				<blockquote>
+					<h3>Experience</h3>
+				</blockquote>
+				<ul>
+					<li>프론트앤드 개발
+						<ul>
+							<li>업무내용</li>
+							<li>업무검토</li>
+							<li>업무기간</li>
+						</ul>
+					</li>
+					<li>웹디자인
+						<ul>
+							<li>업무내용</li>
+							<li>업무검토</li>
+						</ul>
+					</li>
+				</ul>
+				<hr/>    
+            </section>
+
+            <!-- 숙련도 -->
+            <section>
+					<blockquote>
+						<h3>Skills</h3>
+					</blockquote>
+				<hr/>
+
+            </section>
+
+            <!-- 학력 -->
+            <section>
+                <blockquote>
+					<h3>Education</h3>
+				</blockquote>
+				<table border = "1">
+					<caption>학력사항</caption>
+					<thead style="background-color:lightgray">
+						<tr><th>출신학교</th><th>전공</th><th>기간</th><th>구분</th></tr>
+					</thead>
+					<tr><td>○○대학교</td><td>컴퓨터공학</td><td>2014.3~2020.2</td><td>졸업</td></tr>
+					<tr><td>○○○고등학교</td><td>인문계</td><td>2011.3~2014.2</td><td>졸업</td></tr>
+				</table>
+            </section>
+        </div>        
+		</main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>form 태그</title>
+ </head>
+ <body>
+	<form action="link1.html" name="frm1" method="get"> <!-- 전송했을 때 날리는 데이터가 보이면 get -->
+		<fieldset>
+			<legend>회원가입</legend>
+			<p>아이디 : <input type="text" name="userId"/></p>
+			<p>비밀번호 : <input type="password" name="userPw"/></p>
+			<p><input type="submit" value="전송"/></p>
+		</fieldset>
+	</form>
+	
+	<form action="link1.html" name="frm2" method="post"> <!-- 전송했을 때 날리는 데이터가 안보이면 post -->
+		<fieldset>
+			<legend>회원가입</legend>
+			<p>아이디 : <input type="text" name="userId"/></p> 
+			<p>비밀번호 : <input type="password" name="userPw"/></p>
+			<p><input type="submit" value="전송"/></p>
+		</fieldset>
+	</form>
+	<a
+	href="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=jsp">
+	검색 jsp
+	</a>
+	<!-- a태그는 무조건 get방식 -->
+
+	<form action = "http://search.naver.com/search.naver" method ="get">
+		<input type="text" title="검색" name="query"/> <!--input name을 안주면 아무것도 안뜸  -->
+		<input type="submit" value="검색"/>
+	</form>
+
+ </body>
+</html>
