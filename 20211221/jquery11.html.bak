@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>fadeOut/fadeIn/fadeToggle/fadeTo</title>
+  <!-- toggle, slideToggle, fadeToggle : show, hide -->
+   <script	src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js"></script>
+ </script>
+ <script>
+	$(function(){
+		$("#btn7").click(function(){
+			$(this).parent().next().fadeOut(1000);
+		});
+		$("#btn8").click(function(){
+			$(this).parent().next().fadeIn(1000); 
+		});
+		$("#btn9").click(function(){
+			$(this).parent().next().fadeToggle(1000);
+		});
+		// fadeTo : 투명도
+		$("#btn10").click(function(){
+			$(this).parent().next().fadeTo("slow",0.3);
+		});
+		$("#btn11").click(function(){
+			$(this).parent().next().fadeTo("fast",1);
+		});
+	});
+ </script>
+ </head>
+ <body>
+  <p>
+	<button id="btn7">fadeOut</button>
+	<button id="btn8">fadeIn</button>
+	<button id="btn9">fadeToggle</button>
+	<button id="btn10">fadeTo(0.3)</button>
+	<button id="btn11">fadeTo(0.8)</button>
+  </p>
+  <p>
+	중앙방역대책본부(방대본)는 11월 치명률이 1.12%라고 20일 밝혔다. 일상 회복 직전인 10월(0.64%)에 견줘 두배 가까이 증가했다. 치명률은 ‘감염 환자 가운데 목숨을 잃은 사람의 수’로 방역 성과를 즉각적으로 평가할 수 있는 자료다. 11월은 단계적 일상회복 이후 한달 사이 신규 확진자가 3000명 가량 늘 정도로 코로나 확산세가 거셌던 시기인데, 11월 치명률이 12월 말에야 공개된 것이다.
+  </p>
+ </body>
+</html>

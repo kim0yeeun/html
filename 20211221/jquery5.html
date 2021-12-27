@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>이벤트</title>
+  <script	src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js"></script>
+ </script>
+ <script>
+	$(function(){
+		$("#btn1").click(function(){
+			$("#textZone").css("color","blue");
+		});
+		$("#btn2").mouseover(function(){
+			$("#textZone").css("background","yellow");
+		})
+		$("#btn3").mouseover(function(){
+			$("#textZone").css("background","white");
+		})
+		$("#btn4").focus(function(){
+			$("#textZone").css("border","2px solid red");
+		});
+	});
+ </script>
+ </head>
+ <body>
+  <div id="wrap">
+	<p id="textZone">
+		미국에서 코로나19 바이러스의 신종 변이인 오미크론이 급속하게 퍼지면서 미국 내 신규 코로나19 확진자의 73%가 오미크론 변이 감염된 것으로 나타났다. 11월 말까지 미국의 신규 코로나19 확진자의 99%가 델타 변이에 감염됐지만 오미크론이 빠른 속도로 우세종으로 자리잡고 있는 것이다.미국 질병통제예방센터(CDC)는 20일(현지시간) 미국에서 지난 주 발생한 코로나19 확진자의 73%가 오미크론에 감염된 것으로 나타났다고 밝혔다. 일주일 전에 비해 코로나19 확진자 가운데 오미크론 감염자 비율이 6배 가량 늘었다고 CDC는 설명했다.
+	</p>
+	<p><button type="button" id="btn1">click</button></p>
+	<p><button type="button" id="btn2">mouseover</button></p>
+	<p><button type="button" id="btn3">mouseover</button></p>
+	<p><button type="button" id="btn4">focus</button></p>
+  </div>
+ </body>
+</html>

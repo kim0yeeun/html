@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <script	src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js"></script>
+ </script>
+ <script>
+	$(function(){
+		// btn4의 부모의 형제 => p태그
+		$("#btn4").click(function(){
+			$(this).parent().next().slideUp("slow");
+		});
+		$("#btn5").click(function(){
+			$(this).parent().next().slideDown("fast");
+		})
+		$("#btn6").click(function(){
+			$(this).parent().next().slideToggle(100);
+		})
+	});
+ </script>
+  <title>slideUp/slideDown/slideToggle</title>
+ </head>
+ <body>
+  <div id="wrap" style="border:2px solid gray">
+	<p>
+		<button id="btn4">slideUp</button>
+		<button id="btn5">slideDown</button>
+		<button id="btn6">slideToggle</button>
+	</p>
+	<p>
+		중앙방역대책본부(방대본)는 11월 치명률이 1.12%라고 20일 밝혔다. 일상 회복 직전인 10월(0.64%)에 견줘 두배 가까이 증가했다. 치명률은 ‘감염 환자 가운데 목숨을 잃은 사람의 수’로 방역 성과를 즉각적으로 평가할 수 있는 자료다. 11월은 단계적 일상회복 이후 한달 사이 신규 확진자가 3000명 가량 늘 정도로 코로나 확산세가 거셌던 시기인데, 11월 치명률이 12월 말에야 공개된 것이다.
+	</p>
+  </div>
+ </body>
+</html>

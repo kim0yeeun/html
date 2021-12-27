@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>rolling</title>
+  <style>
+  *{margin:0; padding:0;}
+	#wrap{
+		height:19px;
+		width:200px;
+		overflow:hidden;
+		border:1px solid red;
+		padding:2px;
+	}
+  </style>
+  <script	src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js"></script>
+ </script>
+ <script>
+	// "나" 가 위로 올라오려면 "가" 가 밑으로 가야함
+	// rolling 
+	$(function(){ // 함수안에서 up_content가 주기적으로 실행되게 한다. 
+		up_Interval = setInterval(up_content,1000);
+		$("#right_content").mouseenter(function(){
+			// up_Interval을 clearInterval하면 멈춘다.
+			clearInterval(up_Interval);
+		});
+		$("#right_content").mouseleave(function(){
+			up_Interval = setInterval(up_content,1000);
+		});
+	});
+	function up_content(){
+		$("#right_content li:last").after($("#right_content li:first"));	
+	}
+	// down도 가능 
+	function down_content(){
+		$("#right_content li:first").before($("#right_content li:last"));	
+	}
+ </script>
+ </head>
+ <body>
+ <div id="wrap">
+	<ul class="right_content" id="right_content">
+		<li><a href="#">가</a></li>
+		<li><a href="#">나</a></li>
+		<li><a href="#">다</a></li>
+		<li><a href="#">라</a></li>
+		<li><a href="#">마</a></li>
+		<li><a href="#">바</a></li>
+		<li><a href="#">사</a></li>
+		<li><a href="#">아</a></li>
+		<li><a href="#">자</a></li>
+		<li><a href="#">차</a></li>
+		<li><a href="#">타</a></li>
+		<li><a href="#">타</a></li>
+		<li><a href="#">파</a></li>
+		<li><a href="#">하</a></li>
+	</ul>
+ </div>
+ </body>
+</html>

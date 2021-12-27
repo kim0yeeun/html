@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>jquery</title>
+  <script	src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js"></script>
+<!-- javascript16과 비교 -->
+ <script>
+	// 함수를 만들어서 사용할 경우에는 $(); 가 필요 없다. 
+	function valCk(){
+		// username이 null인지 확인 
+		if ($("#userName").val()=="")
+		{
+			alert("이름을 입력해주세요.");
+			$("#userName").focus();
+			return false;
+		}
+		if ($("#userId").val()=="")
+		{
+			alert("아이디 입력해주세요.");
+			$("#userId").focus();
+			return false;
+		}
+		if ($("#userPw").val()=="")
+		{
+			alert("비밀번호를 입력해주세요.");
+			$("#userPw").focus();
+			return false;
+		}
+		if ($("#userPwCon").val()=="")
+		{
+			alert("비밀번호확인을 입력해주세요.");
+			$("#userPwCon").focus();
+			return false;
+		}
+		if ($("#userPw").val()!=$("#userPwCon").val())
+		{
+			alert("비밀번호와 비밀번호 확인이 일치하지 않습니다.");
+			$("#userPw").val(""); //val() 은 값을 갖고오는것이고, val("") 은 값을 저장하는것
+			$("#userPwCon").val(""); // 둘다 값을 초기화하고
+			$("#userPw").focus();	 // 비밀번호에 focus 
+			return false;
+		}
+		//if (!$(":radio[name='gender']").is(":checked")) 밑과 같은 뜻
+		if ($(":radio[id='gender']").is(":checked")==false)
+		{
+			alert("성별을 선택해주세요.");
+			$(":radio[name='gender']:input[value='F']").prop("checked",true);
+			return false;
+		}
+		if ($("#email").val()=="")
+		{
+			alert("이메일을 입력해주세요.");
+			$("#email").focus();
+			return false;
+		}
+		if ($("#userTel").val()=="")
+		{
+			alert("전화번호를 입력해주세요.");
+			$("#userTel").focus();
+			return false;
+		}
+
+	}
+ </script>
+ </head>
+ <body>
+  <form action="#" method="get" name="frm" onsubmit="return valCk()">
+	<table border="1">
+		<tr><th>* 이름</th>
+			<td><input type="text" id="userName" name="userName"/></td>
+		</tr>
+		<tr><th>* 아이디</th>
+			<td><input type="text" id="userId" name="userId"/></td>
+		</tr>
+		<tr><th>* 비밀번호</th>
+			<td><input type="password" id="userPw" name="userPw"/></td>
+		</tr>
+		<tr><th>* 비밀번호 확인</th>
+			<td><input type="password" id="userPwCon" name="userPwCon"/></td>
+		</tr>
+		<tr><th>* 성별</th>
+			<td><input type="radio" id="gender" name="gender" value="F"/>여자
+			<input type="radio" id="gender" name="gender" value="M"/>남자</td>
+		</tr>
+		<tr><th>* 이메일</th>
+			<td><input type="email" id="email" name="email"/></td>
+		</tr>
+		<tr><th>* 연락처</th>
+			<td><input type="tel" id="userTel" name="userTel"/></td>
+		</tr>
+		<tr><th colspan=2><input type="submit" value="전송"/></th></tr>
+	</table>
+  </form>
+ </body>
+</html>

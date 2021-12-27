@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>toggle</title>
+  <script	src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js"></script>
+ </script>
+ <script>
+	$(function(){
+		$(".list1").hide("fast");
+		$("#listWrap").hover(function(){
+			$(".list1").toggle(1000); // hide, show 순으로 되니까 먼저 hide후 적용 
+		});
+		$("#textZone").css("display","none");
+		$("#wrap").hover(function(){
+			$("#textZone").toggle(500);
+		});
+	});
+ </script>
+ </head>
+ <body>
+    <div id="listWrap">
+	<h3>관련사이트</h3>
+	<ul class="list1">
+		<li><a href="#">list1</a></li>
+		<li><a href="#">list2</a></li>
+		<li><a href="#">list3</a></li>
+		<li><a href="#">list4</a></li>
+	</ul>
+	</div>
+	<div id="wrap" style="border: 2px solid red">
+	<h2>콜오나 발오나</h2>
+		<p id="textZone">
+		미국에서 코로나19 바이러스의 신종 변이인 오미크론이 급속하게 퍼지면서 미국 내 신규 코로나19 확진자의 73%가 오미크론 변이 감염된 것으로 나타났다. 11월 말까지 미국의 신규 코로나19 확진자의 99%가 델타 변이에 감염됐지만 오미크론이 빠른 속도로 우세종으로 자리잡고 있는 것이다.미국 질병통제예방센터(CDC)는 20일(현지시간) 미국에서 지난 주 발생한 코로나19 확진자의 73%가 오미크론에 감염된 것으로 나타났다고 밝혔다. 일주일 전에 비해 코로나19 확진자 가운데 오미크론 감염자 비율이 6배 가량 늘었다고 CDC는 설명했다.
+	</p>
+	</div>
+ </body>
+</html>
