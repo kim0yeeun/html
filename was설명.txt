@@ -1,0 +1,27 @@
+W/S (web server) : 정적인 웹문서 (html)을 사용자에게 제공
+WAS(Web Application Server) : jsp문서를 html 로 변환
+			Web Server로 부터 전달받은 Web Application문서를
+			HTML로 변경하여 Web Server에 전달
+
+port : 			 80		   8080
+웹 브라우저 ==========> W/S ==========>WAS
+	  <==========        <==========
+
+웹 서버의 최상위 디렉토리 : "/" : ROOT(localhost:8080/)
+최상위 디렉토리 : 더이상 앞으로 가지 못하는 디렉토리 
+
+
+
+
+
+
+
+동적 : Web Application 
+	JSP (Java Server Page)
+인 문서를 
+정적 : Html (apache)
+로 바꿔주는 것 : WAS (Web Application Server) : tomcat 
+
+Spring : framework (틀을 제공해줌) java랑 문법가틈ㅇ
+
+대신 api에서 제공해주는 메뉴얼을 잘 숙지해야함 
